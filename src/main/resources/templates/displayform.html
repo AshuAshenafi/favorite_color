@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+<!--    <style>-->
+<!--        img {-->
+<!--            max-width: 100%;-->
+<!--            max-height: 100%;-->
+<!--            display: block;-->
+<!--        }-->
+<!--        .box {-->
+<!--            width: 390px;-->
+
+<!--        }-->
+<!--        div{-->
+<!--            /*border: 1px solid maroon;*/-->
+<!--            /*overflow-x: hidden;*/-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+<!--nav bar at the top-->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">HOME</a>
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+
+        </ul>
+        <span class="navbar-text">
+<!--      Navbar text with an inline element-->
+    </span>
+    </div>
+</nav>
+
+
+<!--nav bar-->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container head-j">
+        <!--        <h1 class="display-4">Fluid jumbotron</h1>-->
+        <div href="#" class="navbar-brand" style="color: white"><h3>DO YOU LIKE TO CROSS THE BRIDGE?</h3> </div>
+        <div class="col-lg-6"></div>
+<!--        <div style="color: white"><h2>HAVE PATIENCE AND ANSWER</h2></div>-->
+        <!--        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
+    </div>
+</div>
+<!--three columns-->
+<div class="row">
+<!--    first column-->
+    <div class="col-md-2">
+        <div class="left-div">
+
+        </div>
+    </div>
+<!--    second column-->
+    <div class="col-md-6">
+        <div class="middle-div">
+            <div class="jumbotron col-md-12 justify-content-center">
+                <form action="#" th:action="@{/showform}" th:object="${color}" method="post">
+                    <div class="div-bor">
+                        <div id="name-col" class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!--                        <label >You are [[${color.name}]]</label>-->
+                                </div>
+                                <!--                    <div class="col-md-8">-->
+                                <!--                        -->
+                                <!--                    </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <!--////////////-->
+                    <div class="div-bor">
+                        <div id="quest-col" class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12" th:align="center">
+                                    <label>You are
+<!--                                        <span class="reply-text" > -->
+
+                                        <strong>
+<!--                                            <h2>-->
+                                                [[${color.name}]]
+<!--                                            </h2>-->
+                                        </strong>
+<!--                                        </span>-->
+                                        and your quest is <span class="reply-text">
+                                            <strong>[[${color.quest}]]</strong>
+                                        </span>.</label>
+                                </div>
+                                <!--                    <div class="col-md-8">-->
+                                <!--                        -->
+                                <!--                    </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <!--/////////if starts here-->
+                    <div class="div-bor">
+                        <div id="artist-col" class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12" th:align="center">
+                                    You may proceed across the Bridge!
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+
+
+                    <!--/////////-->
+
+                    <!--        Rating-->
+                    <!--                        ///////////////////////-->
+
+                    <br/>
+                    <!--        <div class="col-md-12 justify-content-center offset-4">-->
+                    <!--            <input type="submit" value="Submit" style="width:30%"/>-->
+
+                    <!--        </div>-->
+                    <!--        Rating-->
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+<!--    third column-->
+    <div class="col-md-4" th:align="center">
+        <div class="box">
+            <img src="bridge.jpg" alt="bridge">
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
